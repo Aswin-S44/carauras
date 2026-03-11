@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&family=Syncopate:wght@700&display=swap');
+
+.premium-showcase {
+  padding: 150px 0;
+  background: #fcfcfd;
+  position: relative;
+  overflow: hidden;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* Background Large Text Decor */
+.decor-text {
+  position: absolute;
+  top: 50%;
+  left: -5%;
+  transform: translateY(-50%) rotate(-90deg);
+  font-family: 'Syncopate', sans-serif;
+  font-size: 10vw;
+  color: #f1f5f9;
+  font-weight: 700;
+  z-index: 0;
+  letter-spacing: 20px;
+  pointer-events: none;
+}
+
+.showcase-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  padding: 0 40px;
+  position: relative;
+  z-index: 2;
+}
+
+/* Left Side - The Visuals */
+.showcase-visual {
+  flex: 1.2;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-car-img {
+  width: 110%;
+  height: auto;
+  z-index: 5;
+  filter: drop-shadow(0 30px 50px rgba(0,0,0,0.15));
+  transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.premium-showcase:hover .main-car-img {
+  transform: scale(1.05) rotate(-2deg);
+}
+
+.floating-glow {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(224, 18, 104, 0.1) 0%, transparent 70%);
+  z-index: 1;
+}
+
+/* Stat Bubbles */
+.stat-bubble {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(15px);
+  padding: 15px 25px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  z-index: 10;
+  border: 1px solid rgba(255,255,255,0.5);
+}
+
+.stat-bubble p { font-size: 11px; color: #64748b; font-weight: 600; text-transform: uppercase; }
+.stat-bubble strong { font-size: 18px; color: #0f172a; font-weight: 800; }
+.stat-bubble svg { color: #E01268; }
+
+.bubble-1 { top: 10%; right: 5%; }
+.bubble-2 { bottom: 10%; left: 0%; }
+
+/* Right Side - The Content */
+.showcase-info {
+  flex: 0.8;
+  padding-left: 60px;
+}
+
+.brand-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: white;
+  padding: 8px 16px;
+  border-radius: 100px;
+  font-size: 12px;
+  font-weight: 800;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  margin-bottom: 24px;
+}
+
+.brand-tag span { color: #E01268; letter-spacing: 1px; }
+
+.title-large {
+  font-size: 80px;
+  line-height: 0.9;
+  font-weight: 800;
+  color: #0f172a;
+  letter-spacing: -4px;
+  margin-bottom: 30px;
+}
+
+.title-large span {
+  color: #E01268;
+  display: block;
+}
+
+.description {
+  font-size: 18px;
+  color: #64748b;
+  line-height: 1.6;
+  margin-bottom: 40px;
+  max-width: 450px;
+}
+
+/* Action Area */
+.price-tag-large {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  background: white;
+  padding: 10px 10px 10px 30px;
+  border-radius: 24px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+  width: fit-content;
+  margin-bottom: 40px;
+}
+
+.price-info .label {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  color: #94a3b8;
+  text-transform: uppercase;
+}
+
+.price-info .value {
+  font-size: 32px;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.premium-cta {
+  background: #E01268;
+  color: white;
+  border: none;
+  padding: 20px 40px;
+  border-radius: 18px;
+  font-weight: 700;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.premium-cta:hover {
+  background: #0f172a;
+  transform: scale(1.05);
+}
+
+.feature-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.f-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.f-row svg { color: #E01268; }
+
+/* Responsive Adjustments */
+@media (max-width: 1200px) {
+  .title-large { font-size: 60px; }
+  .showcase-container { flex-direction: column; gap: 80px; }
+  .showcase-info { padding-left: 0; text-align: center; display: flex; flex-direction: column; align-items: center; }
+  .decor-text { display: none; }
+}
+
+@media (max-width: 768px) {
+  .title-large { font-size: 45px; }
+  .stat-bubble { display: none; } /* Clearer for mobile */
+  .price-tag-large { flex-direction: column; padding: 30px; width: 100%; gap: 20px; }
+}

@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap');
+
+.hero-slider {
+  position: relative;
+  height: 650px;
+  width: 100%;
+  overflow: hidden;
+  background: #000;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  align-items: center;
+}
+
+.slide.active {
+  opacity: 1;
+  visibility: visible;
+  z-index: 10;
+}
+
+.slide-image {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  transform: scale(1.1);
+  transition: transform 8s linear;
+}
+
+.slide.active .slide-image {
+  transform: scale(1);
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 50%, transparent 100%);
+}
+
+.slide-content {
+  position: relative;
+  z-index: 20;
+  width: 100%;
+  color: white;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.text-box {
+  max-width: 650px;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.4s;
+}
+
+.slide.active .text-box {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(224, 18, 104, 0.15);
+  backdrop-filter: blur(10px);
+  padding: 8px 16px;
+  border-radius: 100px;
+  border: 1px solid rgba(224, 18, 104, 0.3);
+  margin-bottom: 24px;
+}
+
+.badge span {
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #E01268;
+}
+
+.text-box h1 {
+  font-size: 4.5rem;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 20px;
+  letter-spacing: -2px;
+}
+
+.text-box p {
+  font-size: 1.2rem;
+  color: rgba(255,255,255,0.8);
+  margin-bottom: 40px;
+  line-height: 1.6;
+}
+
+.cta-group {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 40px;
+}
+
+.main-cta {
+  background: #E01268;
+  color: white;
+  border: none;
+  padding: 18px 36px;
+  border-radius: 14px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.main-cta:hover {
+  background: #c00f58;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(224, 18, 104, 0.4);
+}
+
+.sec-cta {
+  background: rgba(255,255,255,0.1);
+  color: white;
+  border: 1px solid rgba(255,255,255,0.2);
+  backdrop-filter: blur(10px);
+  padding: 18px 36px;
+  border-radius: 14px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.sec-cta:hover {
+  background: rgba(255,255,255,0.2);
+}
+
+.trust-badges {
+  display: flex;
+  gap: 30px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding-top: 30px;
+}
+
+.t-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  color: rgba(255,255,255,0.6);
+}
+
+/* Controls */
+.slider-controls {
+  position: absolute;
+  bottom: 40px;
+  left: 0;
+  width: 100%;
+  z-index: 30;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.ctrl-btn {
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.1);
+  color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.ctrl-btn:hover {
+  background: #E01268;
+  border-color: #E01268;
+}
+
+.progress-container {
+  display: flex;
+  gap: 12px;
+}
+
+.prog-bar {
+  width: 60px;
+  height: 4px;
+  background: rgba(255,255,255,0.2);
+  border-radius: 2px;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+}
+
+.prog-bar .fill {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 0;
+  background: #E01268;
+}
+
+.prog-bar.active .fill {
+  width: 100%;
+  transition: width 6s linear;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 992px) {
+  .hero-slider { height: 600px; }
+  .text-box h1 { font-size: 3rem; }
+}
+
+@media (max-width: 768px) {
+  .hero-slider { height: 550px; }
+  .container { padding: 0 20px; }
+  .text-box h1 { font-size: 2.5rem; }
+  .text-box p { font-size: 1rem; }
+  .cta-group { flex-direction: column; width: 100%; }
+  .trust-badges { display: none; }
+  .overlay {
+    background: linear-gradient(0deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.4) 100%);
+  }
+}

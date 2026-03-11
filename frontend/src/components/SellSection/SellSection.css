@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap');
+
+.sell-car-section {
+  padding: 120px 0;
+  background: #ffffff;
+  position: relative;
+  overflow: hidden;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.gradient-sphere {
+  position: absolute;
+  top: -10%;
+  right: -10%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(224, 18, 104, 0.05) 0%, transparent 70%);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 30px;
+  position: relative;
+  z-index: 2;
+}
+
+.sell-flex {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+}
+
+/* Left Content */
+.sell-left {
+  flex: 1;
+}
+
+.mini-tag {
+  color: #E01268;
+  font-weight: 800;
+  letter-spacing: 2px;
+  font-size: 13px;
+  text-transform: uppercase;
+}
+
+.sell-left h2 {
+  font-size: 52px;
+  font-weight: 800;
+  color: #0F172A;
+  line-height: 1.1;
+  margin: 20px 0;
+  letter-spacing: -2px;
+}
+
+.sell-left h2 span {
+  color: #E01268;
+}
+
+.sell-left p {
+  color: #64748B;
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+/* Auth Card */
+.auth-cta-card {
+  display: flex;
+  align-items: center;
+  background: #0F172A;
+  padding: 24px;
+  border-radius: 24px;
+  color: white;
+  gap: 20px;
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.2);
+}
+
+.cta-icon-box {
+  background: #E01268;
+  width: 60px;
+  height: 60px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cta-text h4 { font-size: 18px; font-weight: 700; margin-bottom: 4px; }
+.cta-text p { font-size: 14px; color: #94A3B8; margin-bottom: 0; }
+
+.create-acc-btn {
+  margin-left: auto;
+  background: white;
+  color: #0F172A;
+  border: none;
+  padding: 14px 24px;
+  border-radius: 14px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.create-acc-btn:hover {
+  background: #E01268;
+  color: white;
+}
+
+/* Steps Grid */
+.sell-right {
+  flex: 1.2;
+}
+
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.step-card {
+  background: #F8FAFC;
+  padding: 40px;
+  border-radius: 30px;
+  position: relative;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border: 1px solid #F1F5F9;
+}
+
+.step-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 30px;
+}
+
+.step-number {
+  font-size: 40px;
+  font-weight: 800;
+  color: rgba(15, 23, 42, 0.05);
+  line-height: 1;
+}
+
+.step-icon {
+  background: white;
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 18px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.03);
+}
+
+.step-card h3 {
+  font-size: 22px;
+  font-weight: 800;
+  color: #0F172A;
+  margin-bottom: 12px;
+}
+
+.step-card p {
+  color: #64748B;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.hover-line {
+  position: absolute;
+  bottom: 0;
+  left: 40px;
+  right: 40px;
+  height: 4px;
+  background: #E01268;
+  transform: scaleX(0);
+  transition: 0.3s ease;
+  border-radius: 2px 2px 0 0;
+}
+
+.step-card:hover {
+  background: white;
+  transform: translateY(-10px);
+  box-shadow: 0 30px 60px rgba(0,0,0,0.05);
+  border-color: #E0126820;
+}
+
+.step-card:hover .hover-line {
+  transform: scaleX(1);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1200px) {
+  .sell-flex { flex-direction: column; text-align: center; }
+  .sell-left { width: 100%; max-width: 700px; }
+  .auth-cta-card { text-align: left; }
+}
+
+@media (max-width: 768px) {
+  .steps-grid { grid-template-columns: 1fr; }
+  .sell-left h2 { font-size: 36px; }
+  .auth-cta-card { flex-direction: column; text-align: center; }
+  .create-acc-btn { margin-left: 0; width: 100%; justify-content: center; }
+}

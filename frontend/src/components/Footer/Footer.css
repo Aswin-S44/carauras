@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --primary: #E01268;
+  --dark-bg: #0a0a0c;
+  --card-bg: #16161a;
+  --text-dim: #94a3b8;
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.carauras-footer {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background: var(--dark-bg);
+  color: white;
+  padding-top: 100px;
+}
+
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+.footer-top-cta {
+  padding-bottom: 80px;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  margin-bottom: 80px;
+}
+
+.footer-top-cta .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+
+.cta-content h2 {
+  font-size: 42px;
+  font-weight: 800;
+  letter-spacing: -2px;
+  margin-bottom: 12px;
+}
+
+.cta-content h2 span {
+  color: var(--primary);
+}
+
+.cta-content p {
+  color: var(--text-dim);
+  font-size: 18px;
+}
+
+.footer-newsletter {
+  display: flex;
+  background: var(--card-bg);
+  padding: 8px;
+  border-radius: 18px;
+  width: 100%;
+  max-width: 500px;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.footer-newsletter input {
+  background: transparent;
+  border: none;
+  flex: 1;
+  padding: 0 20px;
+  color: white;
+  outline: none;
+  font-size: 15px;
+}
+
+.newsletter-btn {
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 14px 28px;
+  border-radius: 14px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.newsletter-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(224, 18, 104, 0.3);
+}
+
+/* Main Footer Grid */
+.main-footer {
+  padding-bottom: 80px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  gap: 60px;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+.logo-sq {
+  background: var(--primary);
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+.footer-logo span {
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.brand-desc {
+  color: var(--text-dim);
+  line-height: 1.6;
+  margin-bottom: 30px;
+  font-size: 15px;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.contact-item svg {
+  color: var(--primary);
+}
+
+.footer-link-col h4 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: white;
+}
+
+.footer-link-col ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.footer-link-col a {
+  text-decoration: none;
+  color: var(--text-dim);
+  font-size: 15px;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.footer-link-col a:hover {
+  color: var(--primary);
+  padding-left: 5px;
+}
+
+/* Bottom Bar */
+.footer-bottom {
+  padding: 40px 0;
+  border-top: 1px solid rgba(255,255,255,0.05);
+}
+
+.footer-bottom .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.copyright {
+  font-size: 14px;
+  color: var(--text-dim);
+}
+
+.footer-socials {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-socials a {
+  color: white;
+  background: rgba(255,255,255,0.05);
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: var(--transition);
+}
+
+.footer-socials a:hover {
+  background: var(--primary);
+  transform: translateY(-5px);
+}
+
+.footer-legal {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.footer-legal a {
+  text-decoration: none;
+  font-size: 14px;
+  color: var(--text-dim);
+}
+
+.footer-legal .sep {
+  color: rgba(255,255,255,0.1);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 1024px) {
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+  .footer-top-cta .container { flex-direction: column; text-align: center; }
+}
+
+@media (max-width: 768px) {
+  .footer-grid { grid-template-columns: 1fr; gap: 40px; }
+  .footer-bottom .container { flex-direction: column; gap: 30px; text-align: center; }
+  .cta-content h2 { font-size: 32px; }
+  .carauras-footer { padding-top: 60px; }
+}

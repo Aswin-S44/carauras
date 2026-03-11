@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap');
+
+.about-wrapper {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  color: #0F172A;
+  background: #fff;
+  padding: 60px 0;
+}
+
+.main-container {
+  max-width: 1100px; /* Constrained width prevents text from scattering */
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header Section */
+.about-intro {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.mini-overline {
+  color: #E01268;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 13px;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.about-intro h1 {
+  font-size: 52px;
+  font-weight: 800;
+  letter-spacing: -2px;
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+
+.about-intro h1 span { color: #E01268; }
+
+.hero-text {
+  font-size: 18px;
+  color: #64748B;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Stats Grid */
+.stats-row-v2 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  background: #F8FAFC;
+  padding: 50px 0;
+  border-radius: 30px;
+  margin-bottom: 80px;
+  text-align: center;
+}
+
+.s-block strong { font-size: 40px; font-weight: 800; display: block; color: #0F172A; }
+.s-block p { font-size: 13px; font-weight: 700; color: #64748B; text-transform: uppercase; margin-top: 5px; }
+
+/* Vision Split Fix */
+.vision-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  margin-bottom: 100px;
+}
+
+.vision-visual {
+  position: relative;
+}
+
+.image-placeholder {
+  width: 100%;
+  height: 450px;
+  background: #F1F5F9;
+  border-radius: 32px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+}
+
+.image-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.visual-badge {
+  position: absolute; bottom: -20px; right: -20px;
+  background: #0F172A; color: #fff;
+  padding: 16px 24px; border-radius: 16px;
+  display: flex; align-items: center; gap: 10px; font-weight: 700;
+}
+
+.vision-info h2 { font-size: 36px; font-weight: 800; margin-bottom: 20px; }
+.vision-info h2 span { color: #E01268; }
+.vision-info p { color: #64748B; font-size: 17px; line-height: 1.7; margin-bottom: 20px; }
+
+.feature-checklist { display: flex; flex-direction: column; gap: 12px; margin-top: 25px; }
+.f-check { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 15px; }
+
+/* Principles Fix */
+.principles-section { text-align: center; margin-bottom: 100px; }
+.section-title { font-size: 32px; font-weight: 800; margin-bottom: 50px; }
+
+.principles-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.p-card {
+  padding: 40px; border-radius: 24px; border: 1px solid #F1F5F9;
+  transition: 0.3s; background: #fff; text-align: left;
+}
+.p-card:hover { border-color: #E01268; transform: translateY(-8px); box-shadow: 0 15px 30px rgba(0,0,0,0.05); }
+
+.p-icon { color: #E01268; margin-bottom: 20px; }
+.p-card h3 { font-size: 20px; font-weight: 800; margin-bottom: 12px; }
+.p-card p { color: #64748B; font-size: 15px; line-height: 1.6; }
+
+/* CTA Section */
+.cta-inner {
+  background: #E01268; color: white;
+  padding: 60px; border-radius: 40px;
+  text-align: center;
+}
+
+.cta-inner h2 { font-size: 40px; font-weight: 800; margin-bottom: 30px; }
+.cta-actions { display: flex; justify-content: center; gap: 15px; }
+
+.cta-main { background: #fff; color: #E01268; border: none; padding: 16px 32px; border-radius: 12px; font-weight: 800; display: flex; align-items: center; gap: 8px; cursor: pointer; }
+.cta-sec { background: #0F172A; color: white; border: none; padding: 16px 32px; border-radius: 12px; font-weight: 800; cursor: pointer; }
+
+/* --- RESPONSIVE FIXES --- */
+@media (max-width: 1024px) {
+  .vision-split { grid-template-columns: 1fr; gap: 40px; text-align: center; }
+  .principles-grid { grid-template-columns: 1fr; }
+  .stats-row-v2 { grid-template-columns: 1fr 1fr; gap: 30px; }
+  .image-placeholder { height: 350px; }
+  .visual-badge { display: none; }
+}
+
+@media (max-width: 768px) {
+  .about-intro h1 { font-size: 36px; }
+  .cta-inner { padding: 40px 20px; }
+  .cta-actions { flex-direction: column; }
+  .cta-inner h2 { font-size: 28px; }
+}
