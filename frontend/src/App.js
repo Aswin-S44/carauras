@@ -8,6 +8,7 @@ import BlogScreen from "./pages/BlogScreen/BlogScreen";
 import ExploreCarsPage from "./pages/ExploreCarsPage/ExploreCarsPage";
 import ContactPage from "./pages/ContactPage/ContactPage";
 import AboutPage from "./pages/AboutPage/AboutPage";
+import Diagram from "./architecture/diagram";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path="/cars" element={<ExploreCarsPage />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/about" element={<AboutPage />} />
+          <Route path="/design" element={<Diagram />} />
         </Routes>
       </BrowserRouter>
       <Footer />
